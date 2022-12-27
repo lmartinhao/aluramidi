@@ -1,14 +1,14 @@
 :root {
   --cinza: #aaa;
-  --vermelha: #e93d50;
-  --vermelha-escura: #af303f;
+  --lilas: #9f84bd;
+  --lilas-escura: #71588d;
   --branca: #fff;
-  --luz: rgb(229, 255, 0);
+  --luz: #ff6392;
 }
 
 body {
   align-items: center;
-  background: linear-gradient(45deg, #a7cfdf 0%,#23538a 100%);
+  background: linear-gradient(45deg, #ede3e9 0%,#9f84bd 100%);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -19,12 +19,14 @@ body {
 h1 {
   color: var(--branca);
   margin-bottom: 20px;
-  font-size: 2rem;
+  font-size: 3rem;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 8px #ff6392;
 }
 
 .teclado {
   background: linear-gradient(to bottom, #eeeeee 0%,#cccccc 100%);
-  box-shadow: 6px 8px 0 6px #666, 10px 10px 10px #000;
+  box-shadow: 6px 6px 10px 6px #666, 10px 10px 10px #000;
   border-radius: 30px;
   display: grid;
   gap: 10px;
@@ -36,7 +38,7 @@ h1 {
   background-color: var(--branca);
   border-radius: 30px;
   box-shadow: 3px 3px 0 var(--cinza);
-  color: var(--vermelha);
+  color: var(--lilas);
   cursor: pointer;
   height: 120px;
   font-size: 1.75em;
@@ -48,9 +50,9 @@ h1 {
 
 .tecla.ativa,
 .tecla:active {
-  background-color: var(--vermelha);
-  border: 4px solid  var(--vermelha);
-  box-shadow: 3px 3px 0 var(--vermelha-escura) inset;
+  background-color: var(--lilas);
+  border: 4px solid  var(--lilas);
+  box-shadow: 3px 3px 0 var(--lilas-escura) inset;
   color: var(--branca);
   outline: none;
 }
@@ -63,5 +65,5 @@ h1 {
 
 .tecla.active:focus,
 .tecla:active:focus {
-  box-shadow: 3px 3px 0 var(--vermelha-escura) inset, 1px 1px 10px var(--luz);
+  box-shadow: 3px 3px 0 var(--lilas-escura) inset, 1px 1px 10px var(--luz);
 }
